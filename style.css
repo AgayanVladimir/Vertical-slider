@@ -1,0 +1,214 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+}
+
+.container {
+	position: relative;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+}
+
+.sidebar {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 35%;
+	transition: transform 0.5s ease-in-out;
+}
+
+.sidebar__item {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: black;
+	font-weight: 700;
+}
+
+.sidebar h1 {
+	font-size: 40px;
+	margin-bottom: 10px;
+	margin-top: -30px;
+	font-family: 'Fuzzy Bubbles', cursive;
+	font-weight: 700;
+}
+
+.sidebar p {
+	font-size: 16px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-family: 'Fuzzy Bubbles', cursive;
+}
+
+.main-slide {
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 35%;
+	width: 65%;
+	transition: transform 0.5s ease-in-out;
+
+}
+
+.main-slide>div {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 100%;
+	width: 100%;
+}
+
+.controls {}
+
+button {
+	background-color: white;
+	border: none;
+	color: #aaa;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 15px;
+}
+
+button:hover {
+	color: #222;
+}
+
+button:focus {
+	outline: none;
+}
+
+.container .controls button {
+	position: absolute;
+	left: 35%;
+	top: 50%;
+	z-index: 100;
+	padding: 5px 20px 10px 20px;
+
+}
+
+.container .controls .down-button {
+	transform: translateX(-100%);
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.container .controls .up-button {
+	transform: translateY(-100%);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.fas {
+	font-size: 38px;
+	font-weight: 700;
+}
+
+#first {
+
+	background: linear-gradient(to bottom, #0099ff 0%, #ff6600 100%);
+}
+
+#second {
+
+	background: linear-gradient(to right, #ffffff 0%, #ccffff 50%);
+}
+
+#third {
+
+	background: linear-gradient(to right, #660066 0%, #ff00ff 100%);
+}
+
+#fourth {
+
+	background: linear-gradient(to right, #000066 0%, #00ccff 100%);
+}
+
+
+.main-slide__first {
+	background-image: url('https://kartinkin.net/uploads/posts/2022-02/1644923228_4-kartinkin-net-p-krasivie-kartinki-na-telefon-oboi-5.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+.main-slide__second {
+	background-image: url('https://funik.ru/wp-content/uploads/2018/10/0a37dbac85e134cfb3a5.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.main-slide__third {
+	background-image: url('https://fullhdoboi.ru/wp-content/uploads/_ph/6/951941007.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.main-slide__fourth {
+	background-image: url('https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@media(max-width:950px) {
+
+
+
+	.sidebar__item h1 {
+		margin-top: -300px;
+
+	}
+}
+
+@media(max-width:840px) {
+
+
+
+	.sidebar__item h1 {
+		font-size: 30px;
+		text-align: center;
+
+	}
+
+	.sidebar__item p {
+		font-size: 14px;
+		text-align: center;
+
+	}
+}
+
+@media(max-width:400px) {
+
+
+
+	.sidebar__item h1 {
+		font-size: 25px;
+		text-align: center;
+
+	}
+
+	.sidebar__item p {
+		font-size: 12px;
+		text-align: center;
+
+	}
+
+	.container .controls button {
+		padding: 5px 15px 10px 15px;
+
+	}
+
+	.fas {
+		font-size: 25px;
+		font-weight: 700;
+	}
+}
